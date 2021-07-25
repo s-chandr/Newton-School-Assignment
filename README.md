@@ -7,7 +7,7 @@ https://drive.google.com/file/d/1oiT3B0Ig370My9jc1TTcNTCO01OpTZt1/view?usp=shari
 ## Github repository for portfolio website 
 https://github.com/s-chandr/Portfolio
 
-## Website direct link 
+## Portfolio Website direct link 
 https://s-chandr.github.io/Portfolio/ 
 
 ## Contact me on :
