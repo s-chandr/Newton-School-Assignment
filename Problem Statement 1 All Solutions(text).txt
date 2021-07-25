@@ -1,0 +1,102 @@
+Solution 1
+
+var month =  + window.prompt("Enter the Number of Month\n(Eg: 01 - January ...)");
+
+const MonthList = ["January", "February", "March","April","May","June","July","August","September","October","November","December"];
+
+//document.write(monthList.i);
+
+    if(month===2)
+{
+    document.write(` Hey ${MonthList[month-1]} has 28 days in a non leap year `);
+}
+else if(month<=7){
+    if(month%2===0)
+        document.write(`Hey ${MonthList[month-1]} has 30 days in a year `);
+    else    
+        document.write(`Hey ${MonthList[month-1]} has 31 days in a year `);
+}
+else if (month<=12 ){
+    if(month%2===0)
+        document.write(` Hey ${MonthList[month-1]} has 31 days in a year `);
+    else    
+        document.write(` Hey ${MonthList[month-1]} has 30 days in a year `);
+}
+else{
+    document.write("Oop's Enter a month number between 0-12");    
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution 2
+
+import java.io.Console;
+import java.util.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+class PrintEven{
+    static void receven(int n){
+        if(n==0)
+            return ;
+        if(n%2==0)
+            {receven(n-2);
+                System.out.printf("%d ",n);
+            }
+
+        else
+            {receven(n-1);
+                //System.out.printf("%d ",n-1);
+            }
+        
+    }
+    public static void main(String[] args) throws IOException{
+        System.out.println("Enter the number in console");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int number = Integer.parseInt(br.readLine());
+        receven(number);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution 3
+
+import java.io.Console;
+import java.util.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+class MatrixDiagonalSum{
+    
+    public static void main(String[] args) throws IOException{
+        System.out.println("Enter the Size N of the Matrix");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        Scanner sc = new Scanner(System.in);
+        int N = Integer.parseInt(br.readLine());
+        int Matrix[][] = new int[N][N];
+        for(int i = 0; i < N; i++){
+            for(int j = 0; j < N;j++){
+                Matrix[i][j] = sc.nextInt();
+            }
+        }
+        int PDsum=0,SDsum=0;
+        for(int i = 0,j=0; i < N; i++,j++){
+            PDsum+=Matrix[i][j];
+            SDsum+=Matrix[N-i-1][j];
+        }
+        
+        System.out.printf("Primary Diagonal Sum: %d\nSecondary Diagonal Sum: %d\nTotal Sum: %d",PDsum,SDsum,PDsum+SDsum);
+        //The Total Sum has center element included twice 
+        //to remove subtract Matrix[N/2][N/2] from totalsum
+        
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
